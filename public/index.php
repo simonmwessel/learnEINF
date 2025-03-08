@@ -133,7 +133,7 @@ $processContent = function($text) use ($Parsedown) {
                                             <div id="<?php echo $qCollapse; ?>"
                                                  class="accordion-collapse collapse"
                                                  aria-labelledby="<?php echo $qHeading; ?>">
-                                                <div class="accordion-body question-body mt-3 mx-3">
+                                                <div class="accordion-body question-body mt-3 mx-3 pb-0 overflow-auto">
                                                     <?php echo $processContent($qItem['answer']); ?>
                                                 </div>
                                             </div>
