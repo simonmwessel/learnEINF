@@ -1,0 +1,40 @@
+{
+    "name": "simon/learn-einf",
+    "type": "project",
+    "require": {
+        "erusev/parsedown": "1.7.2.0",
+        "erusev/parsedown-extra": "^0.7.1",
+        "ext-json": "*",
+        "twbs/bootstrap-icons": "^1.11",
+        "twbs/bootstrap": "^5.3",
+        "ext-openssl": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Simon\\LearnEinf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Simon Wessel",
+            "email": "code@simonwessel.de"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "php create_directorys.php",
+            "copy /Y vendor\\twbs\\bootstrap\\dist\\css\\bootstrap.min.css public\\assets\\css\\bootstrap\\bootstrap.min.css",
+            "copy /Y vendor\\twbs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js public\\assets\\js\\bootstrap\\bootstrap.bundle.min.js",
+            "copy /Y vendor\\twbs\\bootstrap-icons\\font\\bootstrap-icons.css public\\assets\\css\\bootstrap-icons\\bootstrap-icons.css",
+            "xcopy /Y /I /E vendor\\twbs\\bootstrap-icons\\font\\fonts public\\assets\\css\\bootstrap-icons\\fonts"
+        ],
+        "post-update-cmd": [
+            "php create_directorys.php",
+            "copy /Y vendor\\twbs\\bootstrap\\dist\\css\\bootstrap.min.css public\\assets\\css\\bootstrap\\bootstrap.min.css",
+            "copy /Y vendor\\twbs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js public\\assets\\js\\bootstrap\\bootstrap.bundle.min.js",
+            "copy /Y vendor\\twbs\\bootstrap-icons\\font\\bootstrap-icons.css public\\assets\\css\\bootstrap-icons\\bootstrap-icons.css",
+            "xcopy /Y /I /E vendor\\twbs\\bootstrap-icons\\font\\fonts public\\assets\\css\\bootstrap-icons\\fonts"
+        ]
+    }
+}
