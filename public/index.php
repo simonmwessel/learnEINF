@@ -64,7 +64,7 @@ $processContent = function($text) use ($Parsedown) {
 <!DOCTYPE html>
 <html lang="de" class="dark-mode">
 <head>
-    <title>EINF</title>
+    <title>Kai Apple 2</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
