@@ -2,11 +2,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
+    // Function to update the meta theme-color tag
+    function setThemeColor(color) {
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', color);
+        }
+    }
+
     // Function to update the theme and toggle table classes
     function syncTheme(theme) {
-        // Toggle dark mode on body
+        // Toggle dark mode on html and body tags
+        document.documentElement.classList.toggle('dark-mode', theme === 'dark');
         document.body.classList.toggle('dark-mode', theme === 'dark');
         localStorage.setItem('theme', theme);
+
+        // Update meta theme-color based on the theme
+        if (theme === 'dark') {
+            setThemeColor('#1c1e21');
+        } else {
+            setThemeColor('#f5f7fa');
+        }
 
         // Toggle "table-dark" class on all <table> elements
         document.querySelectorAll('table').forEach(table => {

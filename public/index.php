@@ -62,11 +62,14 @@ $processContent = function($text) use ($Parsedown) {
 
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="dark-mode">
 <head>
-    <meta charset="UTF-8">
     <title>EINF</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1c1e21">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="csrf-token" content="<?php echo htmlspecialchars(getCsrfToken()); ?>">
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
