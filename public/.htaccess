@@ -1,11 +1,11 @@
-# .htaccess in /public
-
+# .htaccess in public/ when public is already the DocumentRoot
 RewriteEngine On
 RewriteBase /
 
-# Don't rewrite existing files or directories
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# If a file or directory physically exists, don't rewrite
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# Rewrite everything else to index.php
-RewriteRule ^.*$ index.php [QSA,L]
+# Otherwise, pass the request to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

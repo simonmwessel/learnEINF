@@ -1,7 +1,7 @@
 {
     "categories": [
         {
-            "title": "technische Grundlagen der Informatik",
+            "title": "Technische Grundlagen der Informatik",
             "questions": [
                 {
                     "question": "Nennen Sie die grundlegenden Bausteine eines Computers und erläutern Sie deren Funktion.",
@@ -87,7 +87,7 @@
             ]
         },
         {
-            "title": "von-Neumann-Architektur",
+            "title": "Von-Neumann-Architektur",
             "questions": [
                 {
                     "question": "Nennen Sie die wesentlichen Komponenten der von-Neumann-Architektur und erläutern Sie deren jeweilige Funktion.",
@@ -173,7 +173,7 @@
             ]
         },
         {
-            "title": "höhere Programmiersprachen",
+            "title": "Höhere Programmiersprachen",
             "questions": [
                 {
                     "question": "Nennen Sie drei wesentliche Merkmale imperativer Programmiersprachen.",
